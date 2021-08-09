@@ -17,6 +17,6 @@ object CaeserCipher extends App{
   val pt = cipher(D, ct, 5, alphabet)  // decrypt encrypted string
 
   println("\nAfter Encrypted -> " + ct)
-  println(  "After Decrypted -> " + pt + "")
+  println(  "After Decrypted -> " + pt + " in Capital letters")
 
 }
