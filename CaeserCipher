@@ -1,13 +1,13 @@
 object CaeserCipher extends App{
 
-  val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ*&@^#" ;
+  val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!(+=~ abcdefghijklmnopqrstuvwxyz*&@^#" ;
 
   // a = alphabet
   //key = number to shift given letter
   //s =  string to encrypt and decrypt
 
-  val E = (c: Char, key: Int, a: String) => a((a.indexOf(c.toUpper) + key) % a.length) ; //algorithm to make encryption
-  val D = (c: Char, key: Int, a: String) => a((a.indexOf(c.toUpper) - key) % a.length) ; //algorithm to make decryption of encrypted string
+  val E = (c: Char, key: Int, a: String) => a((a.indexOf(c) + key) % a.length) ; //algorithm to make encryption
+  val D = (c: Char, key: Int, a: String) => a((a.indexOf(c) - key) % a.length) ; //algorithm to make decryption of encrypted string
 
   val s = scala.io.StdIn.readLine("Enter the String to Decript : ") ;
 
